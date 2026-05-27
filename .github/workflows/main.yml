@@ -2,7 +2,7 @@ name: Deploy Pygame to Web
 
 on:
   push:
-    branches: [ "main" ] # Hoặc "master" tùy thuộc vào tên nhánh chính của bạn
+    branches: [ "main" ] # Sửa thành "master" nếu nhánh chính của bạn tên là master
 
 permissions:
   contents: read
@@ -31,16 +31,17 @@ jobs:
       - name: Install Pygame-script (pygbag)
         run: |
           python -m pip install --upgrade pip
-          pip install pygbag
+          幕 pip install pygbag
 
       - name: Build Web Version
         run: |
-          # Build game sử dụng pygbag dưới dạng template tiêu chuẩn
-          python -m pygbag --build $GITHUB_WORKSPACE/main.py
+          # Chạy pygbag trực tiếp để đóng gói file main.py
+          python -m pygbag --build ./main.py
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Chỉ định chính xác thư mục chứa index.html sau khi build xong
           path: 'build/web'
 
       - name: Deploy to GitHub Pages
