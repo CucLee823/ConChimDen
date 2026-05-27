@@ -51,7 +51,7 @@ load_img = pygame.image.load("assets/load.png")
 load_img = pygame.transform.scale(load_img, (100,100))
 load_rect = load_img.get_rect(center=(200, 500))
 
-ready_img = pygame.image.load("assets/Ready.png")
+ready_img = pygame.image.load("assets/ready.png")
 ready_img = pygame.transform.scale(ready_img, (180, 160))
 ready_rect = ready_img.get_rect(center=(200, 420))
 
