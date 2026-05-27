@@ -10,9 +10,9 @@ MAX_SPEED=10
 score=0
 game_play=True
 h_score=0
-game_font=pygame.font.Font("assets/04B_19.ttf",40)
-font_big=pygame.font.Font("assets/04B_19.ttf",40)
-font_mid=pygame.font.Font("assets/04B_19.ttf",32)
+game_font=pygame.font.Font("assets/04B_19.TTF",40)
+font_big=pygame.font.Font("assets/04B_19.TTF",40)
+font_mid=pygame.font.Font("assets/04B_19.TTF",32)
 
 # state: "menu" | "play" | "dead"
 state = "menu"
